@@ -15,7 +15,7 @@ MonoBehaviour:
   roomNodeTypeName: Corridor NS
   displayInNodeGraphEditor: 0
   isCorridor: 1
-  isCorridorNS: 0
+  isCorridorNS: 1
   isCorridorEW: 0
   isEntrance: 0
   isBossRoom: 0

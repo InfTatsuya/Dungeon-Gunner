@@ -16,7 +16,7 @@ MonoBehaviour:
   displayInNodeGraphEditor: 0
   isCorridor: 1
   isCorridorNS: 0
-  isCorridorEW: 0
+  isCorridorEW: 1
   isEntrance: 0
   isBossRoom: 0
   isNone: 0
