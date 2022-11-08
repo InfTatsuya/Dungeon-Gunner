@@ -27,4 +27,8 @@ public class GameResources : MonoBehaviour
     #endregion
 
     public RoomNodeTypeListSO roomNodeTypeList;
+
+    [Space(10)]
+    [Header("MATERIALS"), Tooltip("Dimmed Material")]
+    public Material dimmedMaterial;
 }
