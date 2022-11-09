@@ -48,7 +48,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
         if (!dungeonBuildSuccessful)
         {
-            Debug.LogError("Couldn't build dungeon!!!!");
+            Debug.Log("Couldn't build dungeon!!!!");
         }
     }
 

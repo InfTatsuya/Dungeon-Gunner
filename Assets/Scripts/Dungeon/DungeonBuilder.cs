@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 [DisallowMultipleComponent]
 public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
@@ -336,7 +337,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
     private bool IsOverlappingIntervals(int min1, int max1, int min2, int max2)
     {
-        if(Mathf.Max(min1, min2) <= Mathf.Max(max1, max2))
+        if(Mathf.Max(min1, min2) <= Mathf.Min(max1, max2))
         {
             return true;
         }
@@ -370,7 +371,7 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     {
         foreach(Doorway doorway in roomDoorwayList)
         {
-            if(!doorway.isConnected && doorway.isUnavailable)
+            if(!doorway.isConnected && !doorway.isUnavailable)
             {
                 yield return doorway;   
             }
@@ -456,7 +457,23 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
 
     private void InstantiateRoomGameObject()
     {
+        foreach(KeyValuePair<string, Room> keyValuePair in dungeonBuilderRoomDictionary)
+        {
+            Room room = keyValuePair.Value;
 
+            Vector3 roomPosition = new Vector3(room.lowerBounds.x - room.templateLowerBounds.x,
+                                               room.lowerBounds.y - room.templateLowerBounds.y,
+                                               0f);
+
+            GameObject roomGameObject = Instantiate(room.prefab, roomPosition, Quaternion.identity, transform);
+
+            InstantiatedRoom instantiatedRoom = roomGameObject.GetComponentInChildren<InstantiatedRoom>();
+            instantiatedRoom.room = room;
+
+            instantiatedRoom.Initialise(roomGameObject);
+
+            room.instantiatedRoom = instantiatedRoom;
+        }
     }
 
     public RoomTemplateSO GetRoomTemplate(string roomTemplateID)
