@@ -29,6 +29,10 @@ public class GameResources : MonoBehaviour
     public RoomNodeTypeListSO roomNodeTypeList;
 
     [Space(10)]
+    [Header("PLAYER"), Tooltip("The current player SO - used to ref the current player betwwen scenes")]
+    public CurrentPlayerSO currentPlayer;
+
+    [Space(10)]
     [Header("MATERIALS"), Tooltip("Dimmed Material")]
     public Material dimmedMaterial;
 }

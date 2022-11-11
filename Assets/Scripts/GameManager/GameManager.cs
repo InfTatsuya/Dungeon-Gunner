@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System;
 
 [DisallowMultipleComponent]
 public class GameManager : SingletonMonoBehaviour<GameManager>
@@ -11,8 +12,29 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     [SerializeField] private List<DungeonLevelSO> dungeonLevelList;
 
     [SerializeField] private int currentDungeonLevelListIndex = 0;
+    private Room currentRoom;
+    private Room previousRoom;
+    private PlayerDetailsSO playerDetails;
+    private Player player;
 
     [HideInInspector] public GameState gameState;
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        playerDetails = GameResources.Instance.currentPlayer.playerDetails;
+
+        InstantiatePlayer();
+    }
+
+    private void InstantiatePlayer()
+    {
+        GameObject playerGameObject = Instantiate(playerDetails.playerPrefab);
+
+        player = playerGameObject.GetComponent<Player>();
+        player.Initialize(playerDetails);
+    }
 
     void Start()
     {
@@ -37,9 +59,13 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
                 PlayDungeonLevel(currentDungeonLevelListIndex);
                 gameState = GameState.playingLevel;
                 break;
-
-
         }
+    }
+
+    public void SetCurrentRoom(Room room)
+    {
+        previousRoom = currentRoom;
+        currentRoom = room;
     }
 
     private void PlayDungeonLevel(int dungeonLevelListIndex)
@@ -50,6 +76,24 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         {
             Debug.Log("Couldn't build dungeon!!!!");
         }
+
+        player.gameObject.transform.position = new Vector3(
+            (currentRoom.lowerBounds.x + currentRoom.upperBounds.x) / 2f,
+            (currentRoom.lowerBounds.y + currentRoom.upperBounds.y) / 2f,
+            0f);
+
+        player.gameObject.transform.position = 
+            HelperUtilities.GetSpawnPositionNearestToPlayer(player.gameObject.transform.position);
+    }
+
+    public Room GetCurrentRoom()
+    {
+        return currentRoom;
+    }
+
+    public Player GetPlayer()
+    {
+        return player;
     }
 
     #region Validation  

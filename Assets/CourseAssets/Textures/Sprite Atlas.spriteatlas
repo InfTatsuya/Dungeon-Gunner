@@ -66,6 +66,11 @@ SpriteAtlas:
   - {fileID: 8827314032051597313, guid: fa1d1800df669f748a1a75d3670cb211, type: 3}
   - {fileID: -4241436176285001007, guid: fa1d1800df669f748a1a75d3670cb211, type: 3}
   - {fileID: -3453194589128944455, guid: fa1d1800df669f748a1a75d3670cb211, type: 3}
+  - {fileID: 443630858, guid: 705158008e761c14e8d9a90b071a93f2, type: 3}
+  - {fileID: -216830390, guid: 705158008e761c14e8d9a90b071a93f2, type: 3}
+  - {fileID: -249560368, guid: 705158008e761c14e8d9a90b071a93f2, type: 3}
+  - {fileID: 2077729668, guid: 705158008e761c14e8d9a90b071a93f2, type: 3}
+  - {fileID: 2110055663, guid: 705158008e761c14e8d9a90b071a93f2, type: 3}
   - {fileID: 8092341334161121636, guid: 84d7d90058e3f0349bda6ae8029ce5ce, type: 3}
   - {fileID: -7389901572951996133, guid: 84d7d90058e3f0349bda6ae8029ce5ce, type: 3}
   - {fileID: 1988785659085463805, guid: 84d7d90058e3f0349bda6ae8029ce5ce, type: 3}
@@ -1065,6 +1070,11 @@ SpriteAtlas:
   - {fileID: 5630720265851966793, guid: d54d9613d30784b45b6880f6e381037c, type: 3}
   - {fileID: -3609589186416510671, guid: d54d9613d30784b45b6880f6e381037c, type: 3}
   - {fileID: -4132714292470020875, guid: d54d9613d30784b45b6880f6e381037c, type: 3}
+  - {fileID: 55228762, guid: c94eeb1352683ab4aa5191b50b1c2bf2, type: 3}
+  - {fileID: 1295842543, guid: c94eeb1352683ab4aa5191b50b1c2bf2, type: 3}
+  - {fileID: 1665483335, guid: c94eeb1352683ab4aa5191b50b1c2bf2, type: 3}
+  - {fileID: 460149215, guid: c94eeb1352683ab4aa5191b50b1c2bf2, type: 3}
+  - {fileID: 560259621, guid: c94eeb1352683ab4aa5191b50b1c2bf2, type: 3}
   - {fileID: -6700794805662796169, guid: 30f59023274138f4c8d0f95e6ee73765, type: 3}
   - {fileID: -5815336272071043481, guid: 30f59023274138f4c8d0f95e6ee73765, type: 3}
   - {fileID: 1175467230528292167, guid: 30f59023274138f4c8d0f95e6ee73765, type: 3}
@@ -1328,6 +1338,12 @@ SpriteAtlas:
   - {fileID: -6935565390650316776, guid: b6fe7c05c782874449c8d8d5404bfdc7, type: 3}
   - {fileID: -3779094970512670579, guid: b6fe7c05c782874449c8d8d5404bfdc7, type: 3}
   - {fileID: 7066134178324908030, guid: b6fe7c05c782874449c8d8d5404bfdc7, type: 3}
+  - {fileID: -1624924220, guid: 5bcb8b15691460641b9ee5473803200e, type: 3}
+  - {fileID: 451654717, guid: 5bcb8b15691460641b9ee5473803200e, type: 3}
+  - {fileID: 1216146930, guid: 5bcb8b15691460641b9ee5473803200e, type: 3}
+  - {fileID: 1326067363, guid: 5bcb8b15691460641b9ee5473803200e, type: 3}
+  - {fileID: 513848733, guid: 5bcb8b15691460641b9ee5473803200e, type: 3}
+  - {fileID: 503124463, guid: 5bcb8b15691460641b9ee5473803200e, type: 3}
   - {fileID: 7161228215103422107, guid: 507c4e15c0fb01347b5dea2fcc129329, type: 3}
   - {fileID: 4509479014178218856, guid: 507c4e15c0fb01347b5dea2fcc129329, type: 3}
   - {fileID: 68913248926244373, guid: 507c4e15c0fb01347b5dea2fcc129329, type: 3}
@@ -1359,6 +1375,11 @@ SpriteAtlas:
   - {fileID: 4488868676253166840, guid: 860b7455f08a5594596ad676217a33f1, type: 3}
   - {fileID: -1198392422965531553, guid: 860b7455f08a5594596ad676217a33f1, type: 3}
   - {fileID: 545367680131803981, guid: 860b7455f08a5594596ad676217a33f1, type: 3}
+  - {fileID: 1851173243, guid: f7645665580fa9745a3b367fcc2ff4b0, type: 3}
+  - {fileID: -544803872, guid: f7645665580fa9745a3b367fcc2ff4b0, type: 3}
+  - {fileID: 930641259, guid: f7645665580fa9745a3b367fcc2ff4b0, type: 3}
+  - {fileID: -411473024, guid: f7645665580fa9745a3b367fcc2ff4b0, type: 3}
+  - {fileID: 1209169340, guid: f7645665580fa9745a3b367fcc2ff4b0, type: 3}
   - {fileID: 21300000, guid: 1e100c655539c4940865adc0c42af0ee, type: 3}
   - {fileID: 699784820957134063, guid: 1215cd65b956f024cbdc450abfca077f, type: 3}
   - {fileID: 4099073902070081491, guid: 1215cd65b956f024cbdc450abfca077f, type: 3}
@@ -3426,6 +3447,7 @@ SpriteAtlas:
   - {fileID: 2845344550940087647, guid: b09f2b7bb2e2e74429070ee09f4b6417, type: 3}
   - {fileID: 2686605927120294174, guid: b09f2b7bb2e2e74429070ee09f4b6417, type: 3}
   - {fileID: -4445195161092938613, guid: b09f2b7bb2e2e74429070ee09f4b6417, type: 3}
+  - {fileID: 21300000, guid: 609b2d7ba330b094fa45d088db1cf868, type: 3}
   - {fileID: 7484636484473527164, guid: 08ad659b2867ddb45b92c0a9a507e2e7, type: 3}
   - {fileID: -7552078467565898865, guid: 08ad659b2867ddb45b92c0a9a507e2e7, type: 3}
   - {fileID: 2570756510883570542, guid: 08ad659b2867ddb45b92c0a9a507e2e7, type: 3}
@@ -3484,6 +3506,12 @@ SpriteAtlas:
   - {fileID: -7890133183410330895, guid: 6d5375fbca01f294c934aabb6e5d8fe7, type: 3}
   - {fileID: 1885673992910332353, guid: 6d5375fbca01f294c934aabb6e5d8fe7, type: 3}
   - {fileID: -3971769956035411267, guid: 6d5375fbca01f294c934aabb6e5d8fe7, type: 3}
+  - {fileID: -106649443, guid: 4afaeafb345420c4790a39b7455ec698, type: 3}
+  - {fileID: -1085318569, guid: 4afaeafb345420c4790a39b7455ec698, type: 3}
+  - {fileID: -856551453, guid: 4afaeafb345420c4790a39b7455ec698, type: 3}
+  - {fileID: 668146023, guid: 4afaeafb345420c4790a39b7455ec698, type: 3}
+  - {fileID: -1221158834, guid: 4afaeafb345420c4790a39b7455ec698, type: 3}
+  - {fileID: -724190212, guid: 4afaeafb345420c4790a39b7455ec698, type: 3}
   - {fileID: 9120464833153107697, guid: dd05770cb535764439cb42a19c6da97a, type: 3}
   - {fileID: -7957142897240470318, guid: dd05770cb535764439cb42a19c6da97a, type: 3}
   - {fileID: -4790149772668399065, guid: dd05770cb535764439cb42a19c6da97a, type: 3}
@@ -3526,6 +3554,12 @@ SpriteAtlas:
   - {fileID: -472446031303474353, guid: aeef484ced598004489a2fc240863311, type: 3}
   - {fileID: -1483629040697752291, guid: aeef484ced598004489a2fc240863311, type: 3}
   - {fileID: -6057141508046486311, guid: aeef484ced598004489a2fc240863311, type: 3}
+  - {fileID: 1621486399, guid: c8d8f84c4fd27cd4a95036336b5ac856, type: 3}
+  - {fileID: 1038608133, guid: c8d8f84c4fd27cd4a95036336b5ac856, type: 3}
+  - {fileID: -834498134, guid: c8d8f84c4fd27cd4a95036336b5ac856, type: 3}
+  - {fileID: 1611848856, guid: c8d8f84c4fd27cd4a95036336b5ac856, type: 3}
+  - {fileID: -1712790832, guid: c8d8f84c4fd27cd4a95036336b5ac856, type: 3}
+  - {fileID: 1420128181, guid: c8d8f84c4fd27cd4a95036336b5ac856, type: 3}
   - {fileID: -2231190010114208796, guid: 15174a4c97084cd468c841a4629c7a42, type: 3}
   - {fileID: -3513276493240798475, guid: 15174a4c97084cd468c841a4629c7a42, type: 3}
   - {fileID: -6660054128715816290, guid: 15174a4c97084cd468c841a4629c7a42, type: 3}
@@ -3944,6 +3978,11 @@ SpriteAtlas:
   - {fileID: 1545675041107784970, guid: 3f7cf28c2e6f1024db7a838708c37860, type: 3}
   - {fileID: -7424005047337356846, guid: 3f7cf28c2e6f1024db7a838708c37860, type: 3}
   - {fileID: -2525159381257784955, guid: 3f7cf28c2e6f1024db7a838708c37860, type: 3}
+  - {fileID: 1838376, guid: ab65948c9b17e8041a13033dbad3fc9b, type: 3}
+  - {fileID: -1431751570, guid: ab65948c9b17e8041a13033dbad3fc9b, type: 3}
+  - {fileID: -1014923303, guid: ab65948c9b17e8041a13033dbad3fc9b, type: 3}
+  - {fileID: 2007838115, guid: ab65948c9b17e8041a13033dbad3fc9b, type: 3}
+  - {fileID: -1864245895, guid: ab65948c9b17e8041a13033dbad3fc9b, type: 3}
   - {fileID: -433781563540062825, guid: 86b7768c29a1e654d93c544c4d513c51, type: 3}
   - {fileID: 607360796130650397, guid: 86b7768c29a1e654d93c544c4d513c51, type: 3}
   - {fileID: 1123601393841034714, guid: 86b7768c29a1e654d93c544c4d513c51, type: 3}
@@ -4077,6 +4116,12 @@ SpriteAtlas:
   - {fileID: 7021922791232097237, guid: 8bf8d01d82dc6a740960ec5440ee3672, type: 3}
   - {fileID: -7673823425356039528, guid: 8bf8d01d82dc6a740960ec5440ee3672, type: 3}
   - {fileID: 539485302203969225, guid: 8bf8d01d82dc6a740960ec5440ee3672, type: 3}
+  - {fileID: 2135547150, guid: c36e121ddd50eaf4f9b8ba535e64084d, type: 3}
+  - {fileID: 752526796, guid: c36e121ddd50eaf4f9b8ba535e64084d, type: 3}
+  - {fileID: 473999239, guid: c36e121ddd50eaf4f9b8ba535e64084d, type: 3}
+  - {fileID: 1049977052, guid: c36e121ddd50eaf4f9b8ba535e64084d, type: 3}
+  - {fileID: 1979107913, guid: c36e121ddd50eaf4f9b8ba535e64084d, type: 3}
+  - {fileID: -305452318, guid: c36e121ddd50eaf4f9b8ba535e64084d, type: 3}
   - {fileID: 4624908043921598686, guid: 56db231d8598e47408f59918d8d4000c, type: 3}
   - {fileID: -4568262440025313861, guid: 56db231d8598e47408f59918d8d4000c, type: 3}
   - {fileID: 8163263371388469110, guid: 56db231d8598e47408f59918d8d4000c, type: 3}
@@ -4447,6 +4492,7 @@ SpriteAtlas:
   - {fileID: -4351605841040406684, guid: 69fdd22f02c6fca418e6266cd70e86b6, type: 3}
   - {fileID: -2639644162458794871, guid: 69fdd22f02c6fca418e6266cd70e86b6, type: 3}
   - {fileID: -3698474173086137429, guid: 69fdd22f02c6fca418e6266cd70e86b6, type: 3}
+  - {fileID: 21300000, guid: 628b752fd352d644f94211157c821d66, type: 3}
   - {fileID: 5810700814193682164, guid: af30b52f2aa05f842b9037519c2a1cf2, type: 3}
   - {fileID: -4276985084334030261, guid: af30b52f2aa05f842b9037519c2a1cf2, type: 3}
   - {fileID: -125589150503618543, guid: af30b52f2aa05f842b9037519c2a1cf2, type: 3}
@@ -4478,6 +4524,12 @@ SpriteAtlas:
   - {fileID: -1158840056329507835, guid: ef13d84f2a000fa48ab2207f729585dc, type: 3}
   - {fileID: 3994473733301485519, guid: ef13d84f2a000fa48ab2207f729585dc, type: 3}
   - {fileID: 501767885402035521, guid: ef13d84f2a000fa48ab2207f729585dc, type: 3}
+  - {fileID: 293534150, guid: 64a15d4ff7f78b5418372a367a763f5c, type: 3}
+  - {fileID: 2139758275, guid: 64a15d4ff7f78b5418372a367a763f5c, type: 3}
+  - {fileID: -574218910, guid: 64a15d4ff7f78b5418372a367a763f5c, type: 3}
+  - {fileID: 992747704, guid: 64a15d4ff7f78b5418372a367a763f5c, type: 3}
+  - {fileID: -1940282796, guid: 64a15d4ff7f78b5418372a367a763f5c, type: 3}
+  - {fileID: -248079670, guid: 64a15d4ff7f78b5418372a367a763f5c, type: 3}
   - {fileID: 21300000, guid: 99370f5f554b8a44f9935cdc80e82266, type: 3}
   - {fileID: 5155036113088016179, guid: 4978016f17d1874479267c696aa9614d, type: 3}
   - {fileID: 3613142970141777371, guid: 4978016f17d1874479267c696aa9614d, type: 3}
@@ -4496,6 +4548,12 @@ SpriteAtlas:
   - {fileID: -390443612624885434, guid: a1ce4a7f3356c1c42b784d28fb415081, type: 3}
   - {fileID: 913157633483822124, guid: a1ce4a7f3356c1c42b784d28fb415081, type: 3}
   - {fileID: 3843157612580316140, guid: a1ce4a7f3356c1c42b784d28fb415081, type: 3}
+  - {fileID: -1214045316, guid: f3dc308f990d1aa479c607d59dbfa27d, type: 3}
+  - {fileID: -1315294714, guid: f3dc308f990d1aa479c607d59dbfa27d, type: 3}
+  - {fileID: -1667799730, guid: f3dc308f990d1aa479c607d59dbfa27d, type: 3}
+  - {fileID: -1422232937, guid: f3dc308f990d1aa479c607d59dbfa27d, type: 3}
+  - {fileID: 820137975, guid: f3dc308f990d1aa479c607d59dbfa27d, type: 3}
+  - {fileID: 370333729, guid: f3dc308f990d1aa479c607d59dbfa27d, type: 3}
   - {fileID: -8555099160025369916, guid: 3b86938f6c8725f478bf0424e272c6a0, type: 3}
   - {fileID: -4374153126136865797, guid: 3b86938f6c8725f478bf0424e272c6a0, type: 3}
   - {fileID: -5475346510643634491, guid: 3b86938f6c8725f478bf0424e272c6a0, type: 3}
@@ -4514,6 +4572,12 @@ SpriteAtlas:
   - {fileID: 4841298937618294002, guid: ec07c39ff0282c542b544706105e2d65, type: 3}
   - {fileID: 6093154883639608457, guid: ec07c39ff0282c542b544706105e2d65, type: 3}
   - {fileID: -7459147896254488333, guid: ec07c39ff0282c542b544706105e2d65, type: 3}
+  - {fileID: 1983936631, guid: a957649f7e334194e8e93c80c997a990, type: 3}
+  - {fileID: 387302306, guid: a957649f7e334194e8e93c80c997a990, type: 3}
+  - {fileID: -307554551, guid: a957649f7e334194e8e93c80c997a990, type: 3}
+  - {fileID: -932734111, guid: a957649f7e334194e8e93c80c997a990, type: 3}
+  - {fileID: -565542602, guid: a957649f7e334194e8e93c80c997a990, type: 3}
+  - {fileID: 1557306018, guid: a957649f7e334194e8e93c80c997a990, type: 3}
   - {fileID: 5564512691774607803, guid: 39f644af82ea6b6488cb9c2d4fc132a6, type: 3}
   - {fileID: 2527973941000397007, guid: 39f644af82ea6b6488cb9c2d4fc132a6, type: 3}
   - {fileID: -1790917911895289673, guid: 39f644af82ea6b6488cb9c2d4fc132a6, type: 3}
@@ -4896,6 +4960,11 @@ SpriteAtlas:
   - sand2_1
   - sand2_2
   - sand2_3
+  - TheThiefIdleUpRight_0
+  - TheThiefIdleUpRight_1
+  - TheThiefIdleUpRight_2
+  - TheThiefIdleUpRight_3
+  - TheThiefIdleUpRight_4
   - statue_ancient_evil_2
   - statue_ancient_evil_3
   - statue_ancient_evil_0
@@ -5895,6 +5964,11 @@ SpriteAtlas:
   - demonic_red1_1
   - demonic_red1_2
   - demonic_red1_3
+  - TheThiefIdleRight_1
+  - TheThiefIdleRight_0
+  - TheThiefIdleRight_3
+  - TheThiefIdleRight_2
+  - TheThiefIdleRight_4
   - Dungeon 1 Tile Shading_9
   - Dungeon 1 Tile Shading_8
   - Dungeon 1 Tile Shading_5
@@ -6158,6 +6232,12 @@ SpriteAtlas:
   - MudrockMoveUp_0
   - MudrockMoveUp_3
   - MudrockMoveUp_2
+  - TheThiefRollDown_4
+  - TheThiefRollDown_5
+  - TheThiefRollDown_0
+  - TheThiefRollDown_1
+  - TheThiefRollDown_2
+  - TheThiefRollDown_3
   - frozen1_3
   - frozen1_2
   - frozen1_1
@@ -6189,6 +6269,11 @@ SpriteAtlas:
   - buckler2_3
   - buckler2_0
   - buckler2_1
+  - TheThiefIdleDown_3
+  - TheThiefIdleDown_2
+  - TheThiefIdleDown_1
+  - TheThiefIdleDown_0
+  - TheThiefIdleDown_4
   - EnemyPreferredPathTile
   - WoodenTableVerticalFlipRight_4
   - WoodenTableVerticalFlipRight_3
@@ -8256,6 +8341,7 @@ SpriteAtlas:
   - TheScientistMoveDown_1
   - TheScientistMoveDown_2
   - TheScientistMoveDown_3
+  - TheThiefMiniMapIcon
   - TheScientistMoveUp_5
   - TheScientistMoveUp_4
   - TheScientistMoveUp_3
@@ -8314,6 +8400,12 @@ SpriteAtlas:
   - cage3_2
   - cage3_1
   - cage3_0
+  - TheThiefMoveRight_2
+  - TheThiefMoveRight_3
+  - TheThiefMoveRight_0
+  - TheThiefMoveRight_1
+  - TheThiefMoveRight_4
+  - TheThiefMoveRight_5
   - floor_nerves5_3
   - floor_nerves5_2
   - floor_nerves5_1
@@ -8356,6 +8448,12 @@ SpriteAtlas:
   - lair0b_1
   - lair0b_2
   - lair0b_3
+  - TheThiefMoveDown_3
+  - TheThiefMoveDown_0
+  - TheThiefMoveDown_1
+  - TheThiefMoveDown_4
+  - TheThiefMoveDown_5
+  - TheThiefMoveDown_2
   - grey_dirt2_1
   - grey_dirt2_0
   - grey_dirt2_3
@@ -8774,6 +8872,11 @@ SpriteAtlas:
   - OrcMoveUp_1
   - OrcMoveUp_4
   - OrcMoveUp_5
+  - TheThiefIdleUp_4
+  - TheThiefIdleUp_0
+  - TheThiefIdleUp_1
+  - TheThiefIdleUp_2
+  - TheThiefIdleUp_3
   - statue_iron_golem_0
   - statue_iron_golem_1
   - statue_iron_golem_2
@@ -8907,6 +9010,12 @@ SpriteAtlas:
   - statue_archer_3
   - statue_archer_0
   - statue_archer_1
+  - TheThiefMoveUpRight_3
+  - TheThiefMoveUpRight_2
+  - TheThiefMoveUpRight_1
+  - TheThiefMoveUpRight_0
+  - TheThiefMoveUpRight_5
+  - TheThiefMoveUpRight_4
   - crypt_domino_4a_3
   - crypt_domino_4a_2
   - crypt_domino_4a_1
@@ -9277,6 +9386,7 @@ SpriteAtlas:
   - wall_old_blood04_0
   - wall_old_blood04_3
   - wall_old_blood04_2
+  - TheThiefHand
   - snake-d1_2
   - snake-d1_3
   - snake-d1_0
@@ -9308,6 +9418,12 @@ SpriteAtlas:
   - blood_red14_2
   - blood_red14_1
   - blood_red14_0
+  - TheThiefMoveUp_1
+  - TheThiefMoveUp_0
+  - TheThiefMoveUp_3
+  - TheThiefMoveUp_2
+  - TheThiefMoveUp_5
+  - TheThiefMoveUp_4
   - CharacterSelectorBackground
   - snake-a3_3
   - snake-a3_2
@@ -9326,6 +9442,12 @@ SpriteAtlas:
   - labyrinth2_2
   - labyrinth2_1
   - labyrinth2_0
+  - TheThiefRollUp_5
+  - TheThiefRollUp_4
+  - TheThiefRollUp_3
+  - TheThiefRollUp_2
+  - TheThiefRollUp_1
+  - TheThiefRollUp_0
   - WoodenBarrel_4
   - WoodenBarrel_5
   - WoodenBarrel_0
@@ -9344,6 +9466,12 @@ SpriteAtlas:
   - frozen8_3
   - frozen8_0
   - frozen8_1
+  - TheThiefRollRight_4
+  - TheThiefRollRight_5
+  - TheThiefRollRight_0
+  - TheThiefRollRight_1
+  - TheThiefRollRight_2
+  - TheThiefRollRight_3
   - SlimeBlockKingMoveRight_Red_1
   - SlimeBlockKingMoveRight_Red_0
   - SlimeBlockKingMoveRight_Red_3
