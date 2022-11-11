@@ -171,5 +171,9 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5446078772597042521, guid: cc38d3786be7659419bfc604bd16e2ad, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ad55c7b9a00422498196bf8b8b6f6ef, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc38d3786be7659419bfc604bd16e2ad, type: 3}
