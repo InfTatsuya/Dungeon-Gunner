@@ -77,6 +77,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
             Debug.Log("Couldn't build dungeon!!!!");
         }
 
+        StaticEventHandler.CallRoomChangedEvent(currentRoom);
+
         player.gameObject.transform.position = new Vector3(
             (currentRoom.lowerBounds.x + currentRoom.upperBounds.x) / 2f,
             (currentRoom.lowerBounds.y + currentRoom.upperBounds.y) / 2f,

@@ -13,13 +13,21 @@ public class DungeonBuilder : SingletonMonoBehaviour<DungeonBuilder>
     private RoomNodeTypeListSO roomNodeTypeList;
     private bool dungeonBuildSuccessful;
 
+    private void OnEnable()
+    {
+        GameResources.Instance.dimmedMaterial.SetFloat("Alpha_Slider", 0f);
+    }
+
+    private void OnDisable()
+    {
+        GameResources.Instance.dimmedMaterial.SetFloat("Alpha_Slider", 1f);
+    }
+
     protected override void Awake()
     {
         base.Awake();
 
         LoadRoomNodeTypeList();
-
-        GameResources.Instance.dimmedMaterial.SetFloat("Alpha_Slider", 1.0f);
     }
 
     private void LoadRoomNodeTypeList()
