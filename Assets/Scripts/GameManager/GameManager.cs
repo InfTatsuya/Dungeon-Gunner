@@ -60,10 +60,10 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     {
         HandleGameState();
 
-        if (Input.GetKeyUp(KeyCode.R))
-        {
-            gameState = GameState.gameStarted;
-        }
+        //if (Input.GetKeyUp(KeyCode.P))
+        //{
+        //    gameState = GameState.gameStarted;
+        //}
     }
 
     private void HandleGameState()

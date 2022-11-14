@@ -104,12 +104,8 @@ PrefabInstance:
       value: 0.6875
       objectReference: {fileID: 0}
     - target: {fileID: 4899282779162263788, guid: cc38d3786be7659419bfc604bd16e2ad, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: abbe40c4d6a803f42a7c4f53404a484d, type: 3}
-    - target: {fileID: 4899282779162263788, guid: cc38d3786be7659419bfc604bd16e2ad, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4899282779162263791, guid: cc38d3786be7659419bfc604bd16e2ad, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x

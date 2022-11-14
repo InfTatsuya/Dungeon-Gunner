@@ -19,6 +19,14 @@ public class PlayerDetailsSO : ScriptableObject
     public int playerHealthAmount;
 
     [Space(10)]
+    [Header("WEAPON")]
+    [Tooltip("Player initial starting weapon")]
+    public WeaponDetailsSO startingWeapon;
+
+    [Tooltip("List of starting weapons")]
+    public List<WeaponDetailsSO> startingWeaponList;
+
+    [Space(10)]
     [Header("OTHER"), Tooltip("Player icon sprite to be used in the minimap")]
     public Sprite playerMinimapIcon;
 
@@ -43,6 +51,8 @@ public class PlayerDetailsSO : ScriptableObject
 
         HelperUtilities.ValidateCheckNullValue(this, nameof(runtimeAnimatorController), runtimeAnimatorController);
 
+        HelperUtilities.ValidateCheckNullValue(this, nameof(startingWeapon), startingWeapon);
+        HelperUtilities.ValidateCheckEnumerableValues(this, nameof(startingWeaponList), startingWeaponList); 
     }
 
 #endif
