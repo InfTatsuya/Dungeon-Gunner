@@ -34,12 +34,12 @@ public class ReloadWeapon : MonoBehaviour
 
         setActiveWeaponEvent.OnSetActiveWeapon -= SetActiveWeaponEvent_OnSetActiveWeapon;
     }
-    private void ReloadWeaponEvent_OnReloadWeapon(ReloadWeaponEvent reloadWeaponEvent, ReloadWeaponEventArg reloadWeaponEventArgs)
+    private void ReloadWeaponEvent_OnReloadWeapon(ReloadWeaponEvent reloadWeaponEvent, ReloadWeaponEventArgs reloadWeaponEventArgs)
     {
         StartReloadWeapon(reloadWeaponEventArgs);
     }
 
-    private void StartReloadWeapon(ReloadWeaponEventArg reloadWeaponEventArgs)
+    private void StartReloadWeapon(ReloadWeaponEventArgs reloadWeaponEventArgs)
     {
         if(reloadWeaponCoroutine != null)
         {
