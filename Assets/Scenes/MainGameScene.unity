@@ -923,6 +923,15 @@ MonoBehaviour:
   - poolSize: 30
     prefab: {fileID: 8941396326425170603, guid: 81751cb48351f4e4b8ce62c264add7f8, type: 3}
     componentType: IFireable
+  - poolSize: 30
+    prefab: {fileID: 8941396326425170603, guid: ecf9ee37e608ffa4d817a0391060f304, type: 3}
+    componentType: IFireable
+  - poolSize: 30
+    prefab: {fileID: 8941396326425170603, guid: f1368a86a9c53fe488f96b00d60d1e8a, type: 3}
+    componentType: IFireable
+  - poolSize: 10
+    prefab: {fileID: 8941396326425170603, guid: 897cd2e0c6e809b4e8df84b11bf83966, type: 3}
+    componentType: IFireable
 --- !u!4 &887036634
 Transform:
   m_ObjectHideFlags: 0
