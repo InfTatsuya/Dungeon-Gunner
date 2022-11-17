@@ -20,6 +20,9 @@ public class WeaponDetailsSO : ScriptableObject
     [Tooltip("Weapon ammo type")]
     public AmmoDetailsSO weaponCurrentAmmo;
 
+    [Tooltip("The weapon shoot effect")]
+    public WeaponShootEffectSO weaponShootEffect;
+
     [Tooltip("The firing sound effect SO for the weapon")]
     public SoundEffectSO weaponFiringSoundEffect;
 

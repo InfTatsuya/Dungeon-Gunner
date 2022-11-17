@@ -47,8 +47,11 @@ public class Ammo : MonoBehaviour, IFireable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        AmmoHitEffect();
+
         DisableAmmo();
     }
+
     public void InitialiseAmmo(AmmoDetailsSO ammoDetails, float aimAngle, float weaponAimAngle, float ammoSpeed, Vector3 weaponAimDirectionVector, bool overrideAmmoMovement = false)
     {
         #region Ammo
@@ -125,6 +128,21 @@ public class Ammo : MonoBehaviour, IFireable
     private void DisableAmmo()
     {
         gameObject.SetActive(false);
+    }
+
+    private void AmmoHitEffect()
+    {
+        if(ammoDetails.ammoHitEffect != null && ammoDetails.ammoHitEffect.ammoHitEffectPrefab != null)
+        {
+            AmmoHitEffect ammoHitEffect = (AmmoHitEffect)PoolManager.Instance.ReuseComponent(
+                ammoDetails.ammoHitEffect.ammoHitEffectPrefab,
+                transform.position, 
+                Quaternion.identity);
+
+            ammoHitEffect.SetHitEffect(ammoDetails.ammoHitEffect);
+
+            ammoHitEffect.gameObject.SetActive(true);
+        }
     }
 
     private void SetAmmoMaterial(Material material)
