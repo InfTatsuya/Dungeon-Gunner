@@ -16,6 +16,7 @@ public class InstantiatedRoom : MonoBehaviour
     [HideInInspector] public Tilemap frontTilemap;
     [HideInInspector] public Tilemap collisionTilemap;
     [HideInInspector] public Tilemap minimapTilemap;
+    [HideInInspector] public int[,] aStarMovementPenalty;
     [HideInInspector] public Bounds roomColliderBounds;
 
     private BoxCollider2D boxCollider2D;
@@ -42,6 +43,8 @@ public class InstantiatedRoom : MonoBehaviour
         PopulateTilemapMemberVariables(roomGameObject);
 
         BlockOffUnusedDoorWays();
+
+        AddObstaclesAndPreferredPath();
 
         AddDoorsToRooms();
 
@@ -179,6 +182,42 @@ public class InstantiatedRoom : MonoBehaviour
 
                 tilemap.SetTransformMatrix(new Vector3Int(startPos.x + xPos, startPos.y - yPos - 1, 0),
                                             transformMatrix);
+            }
+        }
+    }
+
+    private void AddObstaclesAndPreferredPath()
+    {
+        aStarMovementPenalty = new int[
+            room.templateUpperBounds.x - room.templateLowerBounds.x + 1,
+            room.templateUpperBounds.y - room.templateLowerBounds.y + 1];
+
+        for(int x = 0; x < (room.templateUpperBounds.x - room.templateLowerBounds.x + 1); x++)
+        {
+            for(int y = 0; y < (room.templateUpperBounds.y - room.templateLowerBounds.y + 1); y++)
+            {
+                aStarMovementPenalty[x, y] = Settings.defaultAStarMovementPenalty;
+
+                TileBase tile = collisionTilemap.GetTile(new Vector3Int(
+                    x + room.templateLowerBounds.x,
+                    y + room.templateLowerBounds.y,
+                    0));
+
+                //add obstacles
+                foreach(TileBase collisionTile in GameResources.Instance.enemyUnwalkableCollisionTileArray)
+                {
+                    if(collisionTile == tile)
+                    {
+                        aStarMovementPenalty[x, y] = 0;
+                        break;
+                    }
+                }
+
+                //add preferred path
+                if(tile == GameResources.Instance.preferredEnemyPathTile)
+                {
+                    aStarMovementPenalty[x, y] = Settings.preferredPathAStarMovementPenalty;
+                }
             }
         }
     }
