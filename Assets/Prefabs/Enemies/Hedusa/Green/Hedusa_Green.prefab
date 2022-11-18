@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 193931614453900714, guid: 75bb3912fa48f8a44b4aca2e249bcd7c, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 0fc28b000f07b874f90ab67746b1c541, type: 2}
     - target: {fileID: 571416257689235239, guid: 75bb3912fa48f8a44b4aca2e249bcd7c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -147,6 +151,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.42830187
       objectReference: {fileID: 0}
+    - target: {fileID: 6595110729960114976, guid: 75bb3912fa48f8a44b4aca2e249bcd7c, type: 3}
+      propertyPath: enemyDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: df61e619024fde54dbe4cab065e2c51c, type: 2}
     - target: {fileID: 8974850847874343135, guid: 75bb3912fa48f8a44b4aca2e249bcd7c, type: 3}
       propertyPath: m_Controller
       value: 

@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cfe32fd501a4f84191bc9b72f2dbf71, type: 3}
-  m_Name: EnemyDetails_Hedusa_Blue
+  m_Script: {fileID: 11500000, guid: 49138bcbad33257418c6d8eec4d9f41d, type: 3}
+  m_Name: MovementDetails_Hedusa_Blue
   m_EditorClassIdentifier: 
-  enemyName: Hedusa Red
-  enemyPrefab: {fileID: 2045656681871234677, guid: c10005fb94ee19f49bc816377d459e1d, type: 3}
+  minMoveSpeed: 4
+  maxMoveSpeed: 6
+  rollSpeed: 0
+  rollDistance: 0
+  rollCooldownTime: 0
