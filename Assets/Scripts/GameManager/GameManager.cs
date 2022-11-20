@@ -18,6 +18,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     private Player player;
 
     [HideInInspector] public GameState gameState;
+    [HideInInspector] public GameState previousGameState;
 
     protected override void Awake()
     {
@@ -53,6 +54,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     void Start()
     {
+        previousGameState = GameState.gameStarted;
         gameState = GameState.gameStarted;
     }
 
@@ -116,6 +118,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public Sprite GetPlayerMinimapIcon()
     {
         return player.playerDetails.playerMinimapIcon;
+    }
+
+    public DungeonLevelSO GetCurrentDungeonLevel()
+    {
+        return dungeonLevelList[currentDungeonLevelListIndex];
     }
 
     #region Validation  

@@ -15,6 +15,25 @@ public class EnemyDetailsSO : ScriptableObject
     [Tooltip("Distance to the player before enemy starts chasing")]
     public float chaseDistance = 50f;
 
+    [Space(10)]
+    [Header("ENEMY MATERIALS")]
+
+    [Tooltip("The standard lit shader material for enemy")]
+    public Material enemyStandardMaterial;
+
+    [Space(10)]
+    [Header("ENEMY MATERIALIZE SETTINGS")]
+
+    [Tooltip("The time in seconds takes to materialize the enemy")]
+    public float enemyMaterializeTime;
+
+    [Tooltip("The shader is used when apply effect")]
+    public Shader enemyMaterializeShader;
+
+    [ColorUsage(true, true)]
+    [Tooltip("The colour used when enemy materializes.")]
+    public Color enemyMaterializeColor;
+
     #region Validation
 #if UNITY_EDITOR
 
@@ -23,6 +42,9 @@ public class EnemyDetailsSO : ScriptableObject
         HelperUtilities.ValidateCheckEmptyString(this, nameof(enemyName), enemyName);
         HelperUtilities.ValidateCheckNullValue(this, nameof(enemyPrefab), enemyPrefab);
         HelperUtilities.ValidateCheckPositiveValue(this, nameof(chaseDistance), chaseDistance, false);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(enemyStandardMaterial), enemyStandardMaterial);
+        HelperUtilities.ValidateCheckPositiveValue(this, nameof(enemyMaterializeTime), enemyMaterializeTime, true);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(enemyMaterializeShader), enemyMaterializeShader);
     }
 #endif
     #endregion

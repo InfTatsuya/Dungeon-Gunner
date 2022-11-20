@@ -11,6 +11,7 @@ public class EnemyMovementAI : MonoBehaviour
     [SerializeField] private MovementDetailsSO movementDetails;
 
     [HideInInspector] public float moveSpeed;
+    [HideInInspector] public int updateFrameNumber = 1;
 
     private Enemy enemy;
     private Stack<Vector3> movementSteps = new Stack<Vector3>();
@@ -51,6 +52,8 @@ public class EnemyMovementAI : MonoBehaviour
         }
 
         if (!chasePlayer) return;
+
+        if (Time.frameCount % Settings.targetFrameRateToSpreadPathfindingOver != updateFrameNumber) return;
 
         if( currentEnemyPathRebuildCooldown <= 0f ||
             Vector3.Distance(playerRefPosition, GameManager.Instance.GetPlayer().GetPlayerPosition()) 
@@ -118,6 +121,11 @@ public class EnemyMovementAI : MonoBehaviour
         {
             enemy.idleEvent.CallIdleEvent();
         }
+    }
+
+    public void SetUpdateFrameNumber(int frame)
+    {
+        updateFrameNumber = frame;
     }
 
     private Vector3Int GetNearestNonObstaclePlayerPosition(Room currentRoom)

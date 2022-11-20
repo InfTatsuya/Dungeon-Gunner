@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -14,16 +15,19 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(MovementToPosition))]
 [RequireComponent(typeof(IdleEvent))]
 [RequireComponent(typeof(Idle))]
+[RequireComponent(typeof(AnimateEnemy))]
+[RequireComponent(typeof(MaterializeEffect))]
 
 [DisallowMultipleComponent]
 public class Enemy : MonoBehaviour
 {
-    public EnemyDetailsSO enemyDetails;
+    [HideInInspector] public EnemyDetailsSO enemyDetails;
     private EnemyMovementAI enemyMovementAI;
     [HideInInspector] public MovementToPositionEvent movementToPositionEvent;
     [HideInInspector] public IdleEvent idleEvent;
     private CircleCollider2D circleCollider2D;
     private PolygonCollider2D polygonCollider2D;
+    private MaterializeEffect materializeEffect;
     [HideInInspector] public SpriteRenderer[] spriteRendererArray;
     [HideInInspector] public Animator animator;
 
@@ -39,5 +43,50 @@ public class Enemy : MonoBehaviour
         spriteRendererArray = GetComponentsInChildren<SpriteRenderer>();
 
         animator = GetComponent<Animator>();
+
+        materializeEffect = GetComponent<MaterializeEffect>();
+    }
+
+    public void EnemyInitialization(EnemyDetailsSO enemyDetails, int enemySpawnNumber, DungeonLevelSO dungeonLevel)
+    {
+        this.enemyDetails = enemyDetails;
+
+        SetEnemyMovementUpdateFrame(enemySpawnNumber);
+
+        SetEnemyAnimationSpeed();
+
+        StartCoroutine(MaterializeEnemy());
+    }
+
+    private void SetEnemyMovementUpdateFrame(int enemySpawnNumber)
+    {
+        enemyMovementAI.SetUpdateFrameNumber(enemySpawnNumber % Settings.targetFrameRateToSpreadPathfindingOver); ;
+    }
+
+    private void SetEnemyAnimationSpeed()
+    {
+        animator.speed = enemyMovementAI.moveSpeed / Settings.baseSpeedForEnemyAnimations;
+    }
+
+    private IEnumerator MaterializeEnemy()
+    {
+        EnemyEnable(false);
+
+        yield return StartCoroutine(materializeEffect.MaterializeRoutine(
+                            enemyDetails.enemyMaterializeShader,
+                            enemyDetails.enemyMaterializeColor,
+                            enemyDetails.enemyMaterializeTime,
+                            spriteRendererArray,
+                            enemyDetails.enemyStandardMaterial));
+
+        EnemyEnable(true);
+    }
+
+    private void EnemyEnable(bool isEnabled)
+    {
+        circleCollider2D.enabled = isEnabled;
+        polygonCollider2D.enabled = isEnabled;
+
+        enemyMovementAI.enabled = isEnabled;
     }
 }

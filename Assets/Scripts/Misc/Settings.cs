@@ -41,6 +41,8 @@ public static class Settings
     public static int rollDown = Animator.StringToHash("rollDown");
     public static float baseSpeedForPlayerAnimations = 8f;
 
+    public static float baseSpeedForEnemyAnimations = 3f;
+
     public static int open = Animator.StringToHash("open");
     #endregion
 
@@ -64,6 +66,8 @@ public static class Settings
 
     public const float playerMoveDistanceToRebuildPath = 3f;
     public const float enemyPathRebuildCooldown = 2f;
+
+    public const int targetFrameRateToSpreadPathfindingOver = 60;
     #endregion
 
     #region UI PARAMETERS
