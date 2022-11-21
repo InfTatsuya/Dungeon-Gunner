@@ -14,9 +14,24 @@ public static class StaticEventHandler
             room = room
         });
     }
+
+    public static event Action<RoomChangedEventArgs> OnRoomEnemiesDefeated;
+
+    public static void CallRoomEnemiesDefeatedEvent(Room room)
+    {
+        OnRoomEnemiesDefeated?.Invoke(new RoomChangedEventArgs()
+        {
+            room = room
+        });
+    }
 }
 
 public class RoomChangedEventArgs : EventArgs
+{
+    public Room room;
+}
+
+public class RoomEnemiesDefeatedArgs : EventArgs
 {
     public Room room;
 }

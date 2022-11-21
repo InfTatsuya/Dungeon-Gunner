@@ -18,6 +18,12 @@ public class PlayerDetailsSO : ScriptableObject
     [Header("HEALTH"), Tooltip("Player starting health amount")]
     public int playerHealthAmount;
 
+    [Tooltip("Select if has immunity period after being hit")]
+    public bool isImmunityAfterHit = false;
+
+    [Tooltip("Immunity time in seconds")]
+    public float hitImmunityTime;
+
     [Space(10)]
     [Header("WEAPON")]
     [Tooltip("Player initial starting weapon")]
@@ -40,19 +46,18 @@ public class PlayerDetailsSO : ScriptableObject
     private void OnValidate()
     {
         HelperUtilities.ValidateCheckEmptyString(this, nameof(playerCharacterName), playerCharacterName);
-
         HelperUtilities.ValidateCheckNullValue(this, nameof(playerPrefab), playerPrefab);
-
         HelperUtilities.ValidateCheckPositiveValue(this, nameof(playerHealthAmount), playerHealthAmount, false);
-
         HelperUtilities.ValidateCheckNullValue(this, nameof(playerMinimapIcon), playerMinimapIcon);
-
         HelperUtilities.ValidateCheckNullValue(this, nameof(playerHandSprite), playerHandSprite);
-
         HelperUtilities.ValidateCheckNullValue(this, nameof(runtimeAnimatorController), runtimeAnimatorController);
-
         HelperUtilities.ValidateCheckNullValue(this, nameof(startingWeapon), startingWeapon);
-        HelperUtilities.ValidateCheckEnumerableValues(this, nameof(startingWeaponList), startingWeaponList); 
+        HelperUtilities.ValidateCheckEnumerableValues(this, nameof(startingWeaponList), startingWeaponList);
+
+        if (isImmunityAfterHit)
+        {
+            HelperUtilities.ValidateCheckPositiveValue(this, nameof(hitImmunityTime), hitImmunityTime, false);
+        }
     }
 
 #endif
