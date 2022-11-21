@@ -113,7 +113,7 @@ public class Player : MonoBehaviour
     {
         if(healthEventArgs.healthAmount <= 0f)
         {
-            destroyedEvent.CallDestroyedEvent(true);
+            destroyedEvent.CallDestroyedEvent(true, 0);
         }
     }
 
