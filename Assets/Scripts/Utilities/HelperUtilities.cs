@@ -21,6 +21,24 @@ public static class HelperUtilities
         return mouseWorldPos;
     }
 
+    public static void CameraWorldPositionBounds(
+        out Vector2Int cameraWorldPositionLowerBounds,
+        out Vector2Int cameraWorldPositionUpperBounds,
+        Camera camera)
+    {
+        Vector3 worldPositionViewportBottomLeft = 
+            camera.ViewportToWorldPoint(new Vector3(0f, 0f, 0f));
+        Vector3 worldPositionViewportTopRight =
+            camera.ViewportToWorldPoint(new Vector3(1f, 1f, 0f));
+
+        cameraWorldPositionLowerBounds = 
+            new Vector2Int( (int)worldPositionViewportBottomLeft.x,
+                            (int)worldPositionViewportBottomLeft.y);
+        cameraWorldPositionUpperBounds =
+            new Vector2Int( (int)worldPositionViewportTopRight.x,
+                            (int)worldPositionViewportTopRight.y);
+    }
+
     public static float GetAngleFromVector(Vector3 vector)
     {
         float radians = Mathf.Atan2(vector.y, vector.x);
@@ -30,7 +48,8 @@ public static class HelperUtilities
 
     public static Vector3 GetDirectionVectorFromAngle(float angle)
     {
-        Vector3 directionVector = new Vector3(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad) ,0f);
+        Vector3 directionVector = new Vector3(  Mathf.Cos(angle * Mathf.Deg2Rad), 
+                                                Mathf.Sin(angle * Mathf.Deg2Rad) ,0f);
 
         return directionVector;
     }
@@ -51,7 +70,8 @@ public static class HelperUtilities
         {
             aimDir = AimDirection.UpLeft;
         }
-        else if((angleDegrees <= 180f && angleDegrees > 158f) || (angleDegrees > -180f && angleDegrees <= -135f))
+        else if((angleDegrees <= 180f && angleDegrees > 158f) || 
+                (angleDegrees > -180f && angleDegrees <= -135f))
         {
             aimDir = AimDirection.Left;
         }
@@ -59,7 +79,8 @@ public static class HelperUtilities
         {
             aimDir = AimDirection.Down;
         }
-        else if((angleDegrees <= 0f && angleDegrees > -45f) || (angleDegrees > 0 && angleDegrees <= 22f))
+        else if((angleDegrees <= 0f && angleDegrees > -45f) || 
+                (angleDegrees > 0 && angleDegrees <= 22f))
         {
             aimDir = AimDirection.Right;
         }
@@ -77,7 +98,8 @@ public static class HelperUtilities
     /// <summary>
     /// Empty string debug check
     /// </summary>
-    public static bool ValidateCheckEmptyString(Object thisObject, string fileName, string stringToCheck)
+    public static bool ValidateCheckEmptyString(Object thisObject, string fileName, 
+                                                    string stringToCheck)
     {
         if (stringToCheck == "")
         {
@@ -87,7 +109,8 @@ public static class HelperUtilities
         return false;
     }
 
-    public static bool ValidateCheckNullValue(Object thisObject, string fieldName, UnityEngine.Object objectToCheck)
+    public static bool ValidateCheckNullValue(Object thisObject, string fieldName, 
+                                                UnityEngine.Object objectToCheck)
     {
         if(objectToCheck == null)
         {
