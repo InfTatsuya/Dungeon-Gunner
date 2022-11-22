@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[10].y
       value: 1.4967489
       objectReference: {fileID: 0}
+    - target: {fileID: 2291593054177168923, guid: 75bb3912fa48f8a44b4aca2e249bcd7c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.9
+      objectReference: {fileID: 0}
     - target: {fileID: 5379350365592355929, guid: 75bb3912fa48f8a44b4aca2e249bcd7c, type: 3}
       propertyPath: m_Name
       value: SkullFace_White
