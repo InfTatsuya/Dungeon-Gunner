@@ -39,6 +39,9 @@ public class GameResources : MonoBehaviour
     [Tooltip("Door open close sound effect")]
     public SoundEffectSO doorOpenCloseSoundEffect;
 
+    [Tooltip("Table flip sound effect")]
+    public SoundEffectSO tableFlipSoundEffect;
+
     [Space(10)]
     [Header("MATERIALS"), Tooltip("Dimmed Material")]
     public Material dimmedMaterial;
@@ -82,6 +85,8 @@ public class GameResources : MonoBehaviour
         HelperUtilities.ValidateCheckEnumerableValues(this, nameof(enemyUnwalkableCollisionTileArray), enemyUnwalkableCollisionTileArray);
         HelperUtilities.ValidateCheckNullValue(this, nameof(preferredEnemyPathTile), preferredEnemyPathTile);
         HelperUtilities.ValidateCheckNullValue(this, nameof(ammoIconPrefab), ammoIconPrefab);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(tableFlipSoundEffect), tableFlipSoundEffect);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(heartPrefab), heartPrefab);
     }
 #endif
     #endregion

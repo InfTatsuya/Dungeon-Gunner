@@ -162,7 +162,9 @@ public static class AStar
 
         int movementPenalty = instantiatedRoom.aStarMovementPenalty[neightbourNodeXPos, neightbourNodeYPos];
 
-        if (closedNodeHashSet.Contains(neighbourNode) || movementPenalty == 0)
+        int itemObstacle = instantiatedRoom.aStarItemObstacles[neightbourNodeXPos, neightbourNodeYPos];
+
+        if (closedNodeHashSet.Contains(neighbourNode) || movementPenalty == 0 || itemObstacle == 0)
         {
             return null;
         }
