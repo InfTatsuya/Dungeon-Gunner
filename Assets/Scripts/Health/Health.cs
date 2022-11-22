@@ -55,7 +55,7 @@ public class Health : MonoBehaviour
             }
         }
 
-        if(enemy != null && enemy.enemyDetails.isHealthBardisplayed && healthBar != null)
+        if(enemy != null && enemy.enemyDetails.isHealthBarDisplayed && healthBar != null)
         {
             healthBar.EnableHealthBar();
         }

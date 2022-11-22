@@ -7,14 +7,20 @@ public class HealthBar : MonoBehaviour
 
     [Tooltip("The child Bar GameObject")]
     [SerializeField] private GameObject healthBar;
+    [SerializeField] private GameObject backgroundImage;
+    [SerializeField] private GameObject border;
 
     public void EnableHealthBar()
     {
+        border.SetActive(true);
+        backgroundImage.SetActive(true);
         healthBar.SetActive(true);
     }
 
     public void DisableHealthBar()
     {
+        border.SetActive(false);
+        backgroundImage.SetActive(false);
         healthBar.SetActive(false);
     }
 
