@@ -82,7 +82,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         SetCurrentRoom(roomChangedEventArgs.room);
     }
 
-    private void StaticEventHandler_OnRoomEnemiesDefeated(RoomChangedEventArgs roomChangedEventArgs)
+    private void StaticEventHandler_OnRoomEnemiesDefeated(RoomEnemiesDefeatedArgs roomChangedEventArgs)
     {
         RoomEnemiesDefeated();
     }

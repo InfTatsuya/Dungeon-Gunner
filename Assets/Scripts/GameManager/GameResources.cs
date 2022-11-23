@@ -32,6 +32,8 @@ public class GameResources : MonoBehaviour
     [Header("PLAYER"), Tooltip("The current player SO - used to ref the current player betwwen scenes")]
     public CurrentPlayerSO currentPlayer;
 
+
+
     [Space(10)]
     [Header("SOUNDS"), Tooltip("The sounds master mixer group")]
     public AudioMixerGroup soundMasterMixerGroup;
@@ -41,6 +43,20 @@ public class GameResources : MonoBehaviour
 
     [Tooltip("Table flip sound effect")]
     public SoundEffectSO tableFlipSoundEffect;
+
+    [Tooltip("Chest open sound effect")]
+    public SoundEffectSO chestOpenSoundEffect;
+
+    [Tooltip("Health pickup sound effect")]
+    public SoundEffectSO healthPickupSoundEffect;
+
+    [Tooltip("Weapon pickup sound effect")]
+    public SoundEffectSO weaponPickupSoundEffect;
+
+    [Tooltip("Ammo pickup sound effect")]
+    public SoundEffectSO ammoPickupSoundEffect;
+
+
 
     [Space(10)]
     [Header("MATERIALS"), Tooltip("Dimmed Material")]
@@ -52,6 +68,11 @@ public class GameResources : MonoBehaviour
     [Tooltip("The Variable Lit Shader")]
     public Shader variableLitShader;
 
+    [Tooltip("materialize Shader")]
+    public Shader materializeShader;
+
+
+
     [Space(10)]
     [Header("SPECIAL TILEMAP TILES")]
 
@@ -61,6 +82,8 @@ public class GameResources : MonoBehaviour
     [Tooltip("Preferred path tile for enemy navigation")]
     public TileBase preferredEnemyPathTile;
 
+
+
     [Space(10)]
     [Header("UI")]
 
@@ -69,6 +92,24 @@ public class GameResources : MonoBehaviour
 
     [Tooltip("The heart UI prefab")]
     public GameObject heartPrefab;
+
+
+
+
+    [Space(10)]
+    [Header("CHESTS")]
+
+    [Tooltip("Chest Item prefab")]
+    public GameObject chestItemPrefab;
+
+    [Tooltip("Heart icon sprite")]
+    public Sprite heartIcon;
+
+    [Tooltip("Bullet icon sprite")]
+    public Sprite bulletIcon;
+
+
+
 
     #region Validation
 
@@ -87,6 +128,14 @@ public class GameResources : MonoBehaviour
         HelperUtilities.ValidateCheckNullValue(this, nameof(ammoIconPrefab), ammoIconPrefab);
         HelperUtilities.ValidateCheckNullValue(this, nameof(tableFlipSoundEffect), tableFlipSoundEffect);
         HelperUtilities.ValidateCheckNullValue(this, nameof(heartPrefab), heartPrefab);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(chestOpenSoundEffect), chestOpenSoundEffect);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(healthPickupSoundEffect), healthPickupSoundEffect);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(weaponPickupSoundEffect), weaponPickupSoundEffect);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(ammoPickupSoundEffect), ammoPickupSoundEffect);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(chestItemPrefab), chestItemPrefab);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(heartIcon), heartIcon);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(bulletIcon), bulletIcon);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(materializeShader), materializeShader);
     }
 #endif
     #endregion
