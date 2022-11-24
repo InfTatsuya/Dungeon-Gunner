@@ -222,6 +222,22 @@ public static class HelperUtilities
         return error;
     }
 
+    public static bool ValidateCheckPositiveRange(Object thisObject, string fieldNameMinimun, int valueToCheckMinimun, string fieldNameMaximun, int valueToCheckMaximun, bool isZeroAllowed)
+    {
+        bool error = false;
+        if (valueToCheckMinimun > valueToCheckMaximun)
+        {
+            Debug.Log(fieldNameMinimun + " must be less than " + fieldNameMaximun + " in object " + thisObject.name.ToString());
+            error = true;
+        }
+
+        if (ValidateCheckPositiveValue(thisObject, fieldNameMinimun, valueToCheckMinimun, isZeroAllowed)) error = true;
+
+        if (ValidateCheckPositiveValue(thisObject, fieldNameMaximun, valueToCheckMaximun, isZeroAllowed)) error = true;
+
+        return error;
+    }
+
     public static Vector3 GetSpawnPositionNearestToPlayer(Vector3 playerPos)
     {
         Room currentRoom = GameManager.Instance.GetCurrentRoom();

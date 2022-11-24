@@ -29,6 +29,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     private long gameScore;
     private int scoreMultiplier;
     private InstantiatedRoom bossRoom;
+    private bool isFading = false;
 
     [HideInInspector] public GameState gameState;
     [HideInInspector] public GameState previousGameState;
@@ -147,6 +148,27 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
                 RoomEnemiesDefeated();
                 break;
 
+            case GameState.playingLevel:
+                if (Input.GetKeyDown(KeyCode.Tab))
+                {
+                    DisplayDungeonOverviewMap();
+                }
+                break;
+
+            case GameState.dungeonOverviewMap:
+                if (Input.GetKeyUp(KeyCode.Tab))
+                {
+                    DungeonMap.Instance.ClearDungeonOverviewMap();
+                }
+                break;
+
+            case GameState.bossStage:
+                if (Input.GetKeyDown(KeyCode.Tab))
+                {
+                    DisplayDungeonOverviewMap();
+                }
+                break;
+
             case GameState.levelCompleted:
                 StartCoroutine(LevelCompleted());
                 break;
@@ -216,6 +238,13 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
             StartCoroutine(BossStage());
         }
+    }
+
+    private void DisplayDungeonOverviewMap()
+    {
+        if (isFading) return;
+
+        DungeonMap.Instance.DisplayDungeonOverViewMap();
     }
 
     private void PlayDungeonLevel(int dungeonLevelListIndex)
@@ -327,8 +356,10 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         PlayDungeonLevel(currentDungeonLevelListIndex);
     }
 
-    private IEnumerator Fade(float startAlpha, float targetAlpha, float fadeSeconds, Color backgroundColor)
+    public IEnumerator Fade(float startAlpha, float targetAlpha, float fadeSeconds, Color backgroundColor)
     {
+        isFading = true;
+
         Image image = canvasGroup.GetComponent<Image>();
         image.color = backgroundColor;
 
@@ -340,6 +371,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
             yield return null;
         }
+
+        isFading = false;
     }
 
     private IEnumerator GameWon()

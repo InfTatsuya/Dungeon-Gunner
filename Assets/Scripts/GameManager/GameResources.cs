@@ -111,6 +111,12 @@ public class GameResources : MonoBehaviour
 
 
 
+    [Space(10)]
+    [Header("MINIMAP")]
+
+    [Tooltip("Minimap Skull Prefab")]
+    public GameObject minimapSkullPrefab;
+
     #region Validation
 
 #if UNITY_EDITOR
@@ -136,6 +142,7 @@ public class GameResources : MonoBehaviour
         HelperUtilities.ValidateCheckNullValue(this, nameof(heartIcon), heartIcon);
         HelperUtilities.ValidateCheckNullValue(this, nameof(bulletIcon), bulletIcon);
         HelperUtilities.ValidateCheckNullValue(this, nameof(materializeShader), materializeShader);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(minimapSkullPrefab), minimapSkullPrefab);
     }
 #endif
     #endregion
