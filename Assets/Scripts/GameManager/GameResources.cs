@@ -33,6 +33,21 @@ public class GameResources : MonoBehaviour
     public CurrentPlayerSO currentPlayer;
 
 
+    [Space(10)]
+    [Header("MUSIC")]
+
+    [Tooltip("The music master mixer group")]
+    public AudioMixerGroup musicMasterMixerGroup;
+
+    [Tooltip("music on full snapshot")]
+    public AudioMixerSnapshot musicOnFullSnapshot;
+
+    [Tooltip("music on low snapshot")]
+    public AudioMixerSnapshot musicOnLowSnapshot;
+
+    [Tooltip("music off snapshot")]
+    public AudioMixerSnapshot musicOffSnapshot;
+
 
     [Space(10)]
     [Header("SOUNDS"), Tooltip("The sounds master mixer group")]
@@ -143,6 +158,10 @@ public class GameResources : MonoBehaviour
         HelperUtilities.ValidateCheckNullValue(this, nameof(bulletIcon), bulletIcon);
         HelperUtilities.ValidateCheckNullValue(this, nameof(materializeShader), materializeShader);
         HelperUtilities.ValidateCheckNullValue(this, nameof(minimapSkullPrefab), minimapSkullPrefab);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(musicMasterMixerGroup), musicMasterMixerGroup);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(musicOnFullSnapshot), musicOnFullSnapshot);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(musicOnLowSnapshot), musicOnLowSnapshot);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(musicOffSnapshot), musicOffSnapshot);
     }
 #endif
     #endregion
