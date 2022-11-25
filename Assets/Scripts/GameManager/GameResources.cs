@@ -133,6 +133,8 @@ public class GameResources : MonoBehaviour
     [Tooltip("The heart UI prefab")]
     public GameObject heartPrefab;
 
+    [Tooltip("The Score prefab")]
+    public GameObject scorePrefab;
 
 
 
@@ -190,6 +192,7 @@ public class GameResources : MonoBehaviour
         HelperUtilities.ValidateCheckNullValue(this, nameof(musicOffSnapshot), musicOffSnapshot);
         HelperUtilities.ValidateCheckNullValue(this, nameof(playerSelectionPrefab), playerSelectionPrefab);
         HelperUtilities.ValidateCheckEnumerableValues(this, nameof(playerDetailsList), playerDetailsList);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(scorePrefab), scorePrefab);
     }
 #endif
     #endregion
