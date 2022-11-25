@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Tilemaps;
@@ -28,9 +29,24 @@ public class GameResources : MonoBehaviour
 
     public RoomNodeTypeListSO roomNodeTypeList;
 
+
+
+    [Space(10)]
+    [Header("PLAYER SELECTION")]
+
+    [Tooltip("The PlayerSelection prefab")]
+    public GameObject playerSelectionPrefab;
+
+
+
+
     [Space(10)]
     [Header("PLAYER"), Tooltip("The current player SO - used to ref the current player betwwen scenes")]
     public CurrentPlayerSO currentPlayer;
+
+    [Tooltip("Player details list")]
+    public List<PlayerDetailsSO> playerDetailsList;
+
 
 
     [Space(10)]
@@ -38,6 +54,9 @@ public class GameResources : MonoBehaviour
 
     [Tooltip("The music master mixer group")]
     public AudioMixerGroup musicMasterMixerGroup;
+
+    [Tooltip("Main meunu music")]
+    public MusicTrackSO mainMenuMusic;
 
     [Tooltip("music on full snapshot")]
     public AudioMixerSnapshot musicOnFullSnapshot;
@@ -47,6 +66,9 @@ public class GameResources : MonoBehaviour
 
     [Tooltip("music off snapshot")]
     public AudioMixerSnapshot musicOffSnapshot;
+
+
+
 
 
     [Space(10)]
@@ -73,6 +95,7 @@ public class GameResources : MonoBehaviour
 
 
 
+
     [Space(10)]
     [Header("MATERIALS"), Tooltip("Dimmed Material")]
     public Material dimmedMaterial;
@@ -88,6 +111,7 @@ public class GameResources : MonoBehaviour
 
 
 
+
     [Space(10)]
     [Header("SPECIAL TILEMAP TILES")]
 
@@ -96,6 +120,7 @@ public class GameResources : MonoBehaviour
 
     [Tooltip("Preferred path tile for enemy navigation")]
     public TileBase preferredEnemyPathTile;
+
 
 
 
@@ -159,9 +184,12 @@ public class GameResources : MonoBehaviour
         HelperUtilities.ValidateCheckNullValue(this, nameof(materializeShader), materializeShader);
         HelperUtilities.ValidateCheckNullValue(this, nameof(minimapSkullPrefab), minimapSkullPrefab);
         HelperUtilities.ValidateCheckNullValue(this, nameof(musicMasterMixerGroup), musicMasterMixerGroup);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(mainMenuMusic), mainMenuMusic);
         HelperUtilities.ValidateCheckNullValue(this, nameof(musicOnFullSnapshot), musicOnFullSnapshot);
         HelperUtilities.ValidateCheckNullValue(this, nameof(musicOnLowSnapshot), musicOnLowSnapshot);
         HelperUtilities.ValidateCheckNullValue(this, nameof(musicOffSnapshot), musicOffSnapshot);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(playerSelectionPrefab), playerSelectionPrefab);
+        HelperUtilities.ValidateCheckEnumerableValues(this, nameof(playerDetailsList), playerDetailsList);
     }
 #endif
     #endregion

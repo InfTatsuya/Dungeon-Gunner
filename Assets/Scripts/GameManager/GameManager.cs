@@ -477,7 +477,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     private void RestartGame()
     {
-        SceneManager.LoadScene("MainGameScene");
+        SceneManager.LoadScene(0);
     }
 
     public Room GetCurrentRoom()
